@@ -25,5 +25,9 @@ module.exports = {
   plugins: ["react", "@typescript-eslint"],
   rules: {
     "@typescript-eslint/explicit-module-boundary-types": "off",
+    "testing-library/no-render-in-setup": [
+      "error",
+      { allowTestingFrameworkSetupHook: "beforeEach" },
+    ],
   },
 };
