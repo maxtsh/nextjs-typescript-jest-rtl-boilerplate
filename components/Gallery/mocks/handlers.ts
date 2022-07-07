@@ -1,8 +1,9 @@
 import { DefaultBodyType, PathParams, rest } from "msw";
-import type { GalleryResponse } from "../Gallery.types";
+import { ImageType } from "../Gallery.types";
+import type { GeneralResponse } from "types";
 
 const handlers = [
-  rest.get<DefaultBodyType, PathParams<keyof GalleryResponse>>(
+  rest.get<DefaultBodyType, PathParams<keyof GeneralResponse<ImageType>>>(
     "/api/photos",
     (req, res, ctx) => {
       return res(
