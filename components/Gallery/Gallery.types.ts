@@ -11,8 +11,3 @@ export type StateType = {
   error: string | false;
   status: null | number;
 };
-
-export interface GalleryResponse {
-  message: string;
-  data: ImageType[];
-}
